@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VidMentor Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <img src="icons/icon128.png" alt="VidMentor logo" class="logo" />
+      <div>
+        <h1>VidMentor</h1>
+        <p class="subtitle">Extension Settings</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <label for="backendUrl" class="label">Backend API URL</label>
+      <input
+        type="url"
+        id="backendUrl"
+        placeholder="http://localhost:8000"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <p class="hint">URL of your local or deployed VidMentor FastAPI backend.</p>
+
+      <div class="presets">
+        <button type="button" class="preset-btn" data-url="http://localhost:8000">
+          💻 Local (localhost:8000)
+        </button>
+        <button type="button" class="preset-btn" data-url="https://vidmentor-6ixd.onrender.com">
+          ☁️ Deployed (Render)
+        </button>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="saveBtn" class="btn primary">Save</button>
+      <button id="testBtn" class="btn secondary">Test Connection</button>
+    </div>
+
+    <div id="statusMessage" class="status-msg"></div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -16,8 +16,8 @@ that answers questions about a YouTube video using its transcript (RAG).
 ```
 3. Load the extension: `chrome://extensions` -> Developer mode -> Load unpacked
    -> select `yt-doubt-extension`.
-4. For local development, set `BACKEND_URL` in `background.js` to
-   `http://localhost:8000`. **Do not commit this change.**
+4. For local development, the extension defaults to `http://localhost:8000`.
+   You can change the backend URL anytime by clicking the extension icon or opening its Options page.
 
 ## Picking an issue
 
@@ -53,7 +53,6 @@ Use a short prefix: `feat:`, `fix:`, `docs:`, `test:`, `refactor:`, `chore:`.
 ## Please don't
 
 - Commit `.env`, API keys, `venv/`, or `rag_cache/`.
-- Commit a `BACKEND_URL` pointing at localhost.
 - Mix unrelated changes in one PR.
 
 ## Reviews
